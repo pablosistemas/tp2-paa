@@ -6,7 +6,7 @@
 #include <tuple>
 
 #define TEMPO_MAXIMO 1000
-#define COORD 10
+#define COORD 20
 
 std::vector<std::vector<std::vector<uint32_t> > > dp(COORD+1);
 std::vector<std::tuple<uint32_t, uint32_t, uint32_t> > tapioca;
@@ -59,11 +59,8 @@ uint32_t dp_a(int32_t x, int32_t y, uint32_t tempo, uint32_t positivo) {
 }
 
 int main() {
-    FILE* entrada;
-    entrada = fopen("data/entrada1927", "r");
-
     uint32_t n;
-    fscanf(entrada, "%u\n", &n);
+    fscanf(stdin, "%u\n", &n);
 
     for(auto it = dp.begin(); it != dp.end(); it++){
         it->resize(COORD + 1);
@@ -78,7 +75,7 @@ int main() {
     tapioca.resize(n);
     for(uint32_t i = 0; i < n; i++) {
         uint32_t x, y, t;
-        fscanf(entrada, "%u %u %u\n", &x, &y, &t);
+        fscanf(stdin, "%u %u %u\n", &x, &y, &t);
         tapioca[i] = std::make_tuple(x, y, t);
     }
 
@@ -86,27 +83,5 @@ int main() {
 
     fprintf(stdout, "%u\n", dp[6][6][0]);
 
-    fclose(entrada);
-
     return 0;
 }
-
-/*
-
-    auto s1 = eh_solucao(tapioca[0]);
-    auto s2 = eh_solucao(tapioca[1]);
-    auto s3 = eh_solucao(tapioca[2]);
-    auto tupla_teste = std::make_tuple<uint32_t, uint32_t, uint32_t>(1,1,1);
-    auto s4 = eh_solucao(tupla_teste);
-
-    auto max = 0; 
-    for (auto it = tapioca.begin(); it != tapioca.end(); it++) {
-        if (dp[std::get<0>(*it)][std::get<1>(*it)][std::get<2>(*it)] > max) {
-            max = dp[std::get<0>(*it)][std::get<1>(*it)][std::get<2>(*it)];
-        }
-    }
-
-        if (dp[x][y][tempo] < positivo){
-            dp[x][y][tempo] = positivo;
-        }
-*/
