@@ -1,4 +1,5 @@
 #include <inttypes.h>
+#include <algorithm>
 #include <stdio.h>
 #include <vector>
 #include <cmath>
@@ -15,6 +16,8 @@ int main() {
             fscanf(stdin, "%d ", &pesos_trabalhos[i]); 
         }
         fscanf(stdin, "%d\n", &pesos_trabalhos[N-1]); 
+
+        std::sort(pesos_trabalhos.begin(), pesos_trabalhos.end());
 
         uint32_t soma_rangel = pesos_trabalhos[0];
         uint32_t soma_gugu = pesos_trabalhos[N-1];
