@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "--std", "c++14",
+                "-Wall",
+                "-Wno-unknown-pragmas",
+                "-g", "src/main2095/main.cc",
+                "-o", "bin/main"
+            ],
+        },
+    ]
+}
