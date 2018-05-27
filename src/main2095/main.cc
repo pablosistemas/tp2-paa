@@ -11,10 +11,7 @@ void le_arquivo_em_vetor(FILE *entrada, std::vector<uint32_t>& vetor, uint32_t S
 }
 
 int main() {
-    FILE *entrada = fopen("data/entrada2095", "r");
-    if (entrada == NULL) {
-        return -1;
-    }
+    FILE* entrada = stdin;
 
     uint32_t S;
     fscanf(entrada, "%u\n", &S);
@@ -38,6 +35,4 @@ int main() {
     }
 
     fprintf(stdout, "%u\n", num_vitorias);
-
-    fclose(entrada);
 }

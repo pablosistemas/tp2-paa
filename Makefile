@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-Wall -std=c++14
+CFLAGS=-Wall -g
 
 all: 2716 2115  2095 1927
 

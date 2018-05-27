@@ -4,17 +4,25 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}"
+        },
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/main",
-            "args": [],
+            "program": "${workspaceFolder}/bin/2115",
+            "args": ["${workspaceFolder}/data/entrada2095"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
+            "miDebuggerPath": "E://cygwin64//bin//gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -22,7 +30,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build"
+            //"preLaunchTask": "build"
         }
     ]
 }

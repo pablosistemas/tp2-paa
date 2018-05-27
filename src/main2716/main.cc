@@ -4,7 +4,7 @@
 #include <vector>
 #include <cmath>
 
-int main() {
+int main(int argc, char** argv) {
     uint32_t N;
     std::vector<uint32_t> pesos_trabalhos;
 
@@ -36,8 +36,9 @@ int main() {
             }
         }
 
-        fprintf(stdout, "%u\n", (uint32_t)std::abs(soma_gugu - soma_rangel));
+        fprintf(stdin, "%u\n", (uint32_t)std::abs(soma_gugu - soma_rangel));
     }
 
+    //fclose(arq);
     return 0;
 }
