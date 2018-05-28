@@ -15,7 +15,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/2115",
+            "program": "${workspaceFolder}/bin/1927",
             "args": ["${workspaceFolder}/data/entrada2095"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

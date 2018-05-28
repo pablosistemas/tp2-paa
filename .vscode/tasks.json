@@ -10,8 +10,8 @@
                 "--std", "c++14",
                 "-Wall",
                 "-Wno-unknown-pragmas",
-                "-g", "src/main2716/main.cc",
-                "-o", "bin/2716"
+                "-g", "src/1927/main.cc",
+                "-o", "bin/1927"
             ],
         },
     ]

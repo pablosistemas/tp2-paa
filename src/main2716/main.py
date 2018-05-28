@@ -1,73 +1,74 @@
 import sys
 import re
 
-limite_y = 4000
-entrada = None
+coordenada_maxima = 2000
+limite_y = coordenada_maxima * 2 + 1
+indices = [0 for i in range(limite_y)]
+iterador_indices = 0
 pd = None
 X = None
 
-def get_n_elementos_sequencia(linha):
-    match = re.search('(\d+)\n', linha)
-    if match:
-        return match.group(1)
-    return None
-
 
 def get_indice_coluna(diferenca):
-    diferenca_coluna = 2000 + diferenca
+    diferenca_coluna = coordenada_maxima + diferenca
     return diferenca_coluna
 
 
 def get_valor_coluna(coluna):
-    return coluna - 2000
+    return coluna - coordenada_maxima
 
 
-def set_valor_coluna(elemento, coluna):
-    if coluna >= 0 and coluna < 4001:
-        global pd
+def set_valor_coluna(elemento, valor_acumulado, diferenca):
+    global pd, indices, iterador_indices
+    coluna = get_indice_coluna(valor_acumulado + diferenca)
+    if coluna >= 0 and coluna < limite_y and pd[elemento][coluna] == -1:
         pd[elemento][coluna] = 1
+        indices[iterador_indices] = coluna
+        iterador_indices = iterador_indices + 1
 
+    coluna = get_indice_coluna(valor_acumulado - diferenca)
+    if coluna >= 0 and coluna < limite_y and pd[elemento][coluna] == -1:
+        pd[elemento][coluna] = 1
+        indices[iterador_indices] = coluna
+        iterador_indices = iterador_indices + 1
+        
 
 def calcula_diferenca_minima():
-    pd[0][get_indice_coluna(X[0])] = 1
-    pd[0][get_indice_coluna(-X[0])] = 1
+    global iterador_indices
+    iterador_indices = 0
+    set_valor_coluna(0, 0, X[0])
 
     for elemento in range(1, len(pd)):
-        indices = [idx for idx, valor in enumerate(pd[elemento - 1]) if valor == 1]
-        for indice in indices:
+        indices_antigos = [ idx for idx in indices[0:iterador_indices] ]
+        iterador_indices = 0
+        for indice in indices_antigos:
             valor_acumulado = get_valor_coluna(indice)
-            coluna = get_indice_coluna(valor_acumulado + X[elemento]) 
-            set_valor_coluna(elemento, coluna)
-            coluna = get_indice_coluna(valor_acumulado - X[elemento]) 
-            set_valor_coluna(elemento, coluna)
+            set_valor_coluna(elemento, valor_acumulado, X[elemento])
 
 
 def get_valor_minimo_positivo_linha(linha):
-    indices = [idx for idx, valor in enumerate(linha) if valor == 1]
-    valores = list(map(get_valor_coluna, indices))
-    valores = filter(lambda x: x >= 0, valores)
-    return min(valores)
+    for i in range(coordenada_maxima, limite_y):
+        if linha[i] != -1:
+            return i - coordenada_maxima
 
 
 def main():
-    global entrada
-    entrada = sys.stdin
+    global X, pd, diferenca_minima
+    entrada = sys.stdin #open("data/entrada2716", "r") #sys.stdin
 
     linha = entrada.readline()
     while linha:
-        N = get_n_elementos_sequencia(linha)
+        N = int(re.match('(\d+)', linha).group(1))
         linha = entrada.readline()
-        global X
         X = map(int, re.findall(r'\d+', linha))
-        global pd
-        pd = [[-1 for j in range(4001)] for i in range(len(X))]
-
+        pd = [[-1 for j in range(limite_y)] for i in range(len(X))]
         calcula_diferenca_minima()
         minimo = get_valor_minimo_positivo_linha(pd[len(X) - 1])
         print(minimo)
 
         linha = entrada.readline()
-        
+    
+    entrada.close()    
 
 if __name__ == "__main__":
     main()
