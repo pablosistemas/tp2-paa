@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+X	../src/main2716/main.py	/^X = None$/;"	kind:variable	line:9
+alcancavel	../src/main1927/main.py	/^def alcancavel(origem, destino):$/;"	kind:function	line:11
+atualiza_maximo_trufas	../src/main1927/main.py	/^def atualiza_maximo_trufas(indice_tripla):$/;"	kind:function	line:19
+calcula_diferenca_minima	../src/main2716/main.py	/^def calcula_diferenca_minima():$/;"	kind:function	line:36
+calcula_menor_instante	../src/main2115/main.py	/^def calcula_menor_instante():$/;"	kind:function	line:11
+calcula_trufas	../src/main1927/main.py	/^def calcula_trufas(indice_tripla):$/;"	kind:function	line:25
+coordenada_maxima	../src/main2716/main.py	/^coordenada_maxima = 2000$/;"	kind:variable	line:4
+dp	../src/main2115/main.py	/^dp = None$/;"	kind:variable	line:4
+dp_ordenado	../src/main2115/main.py	/^dp_ordenado = None$/;"	kind:variable	line:5
+get_indice_coluna	../src/main2716/main.py	/^def get_indice_coluna(diferenca):$/;"	kind:function	line:12
+get_valor_coluna	../src/main2716/main.py	/^def get_valor_coluna(coluna):$/;"	kind:function	line:17
+get_valor_minimo_positivo_linha	../src/main2716/main.py	/^def get_valor_minimo_positivo_linha(linha):$/;"	kind:function	line:49
+indices	../src/main2716/main.py	/^indices = [0 for i in range(limite_y)]$/;"	kind:variable	line:6
+inicializa_pd	../src/main1927/main.py	/^def inicializa_pd(n):$/;"	kind:function	line:60
+iterador_indices	../src/main2716/main.py	/^iterador_indices = 0$/;"	kind:variable	line:7
+limite_y	../src/main2716/main.py	/^limite_y = coordenada_maxima * 2 + 1$/;"	kind:variable	line:5
+main	../src/main1927/main.py	/^def main():$/;"	kind:function	line:65
+main	../src/main2115/main.py	/^def main():$/;"	kind:function	line:20
+main	../src/main2716/main.py	/^def main():$/;"	kind:function	line:55
+main.py	../src/main1927/main.py	1;"	kind:file	line:1
+main.py	../src/main2115/main.py	1;"	kind:file	line:1
+main.py	../src/main2716/main.py	1;"	kind:file	line:1
+max_tempo	../src/main1927/main.py	/^max_tempo = 1000$/;"	kind:variable	line:6
+maximo_trufas_geral	../src/main1927/main.py	/^maximo_trufas_geral = (0, None)$/;"	kind:variable	line:4
+ordena_por_momento_queda	../src/main1927/main.py	/^def ordena_por_momento_queda(tripla_l):$/;"	kind:function	line:56
+ordena_por_tempo_fim	../src/main2115/main.py	/^def ordena_por_tempo_fim(dpl):$/;"	kind:function	line:7
+origem	../src/main1927/main.py	/^origem = (6, 6, 0)$/;"	kind:variable	line:5
+pd	../src/main1927/main.py	/^pd = None$/;"	kind:variable	line:8
+pd	../src/main2716/main.py	/^pd = None$/;"	kind:variable	line:8
+re	../src/main1927/main.py	/^import re$/;"	kind:namespace	line:2
+re	../src/main2115/main.py	/^import re$/;"	kind:namespace	line:2
+re	../src/main2716/main.py	/^import re$/;"	kind:namespace	line:2
+set_valor_coluna	../src/main2716/main.py	/^def set_valor_coluna(elemento, valor_acumulado, diferenca):$/;"	kind:function	line:21
+sys	../src/main1927/main.py	/^import sys$/;"	kind:namespace	line:1
+sys	../src/main2115/main.py	/^import sys$/;"	kind:namespace	line:1
+sys	../src/main2716/main.py	/^import sys$/;"	kind:namespace	line:1
+tripla	../src/main1927/main.py	/^tripla = None$/;"	kind:variable	line:7

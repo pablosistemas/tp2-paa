@@ -4,25 +4,37 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${file}"
+            "program": "${file}",
+            "windows": {
+                "pythonPath": "D:/Users/Pablo/Anaconda2/python.exe"
+            },
+            "linux": {
+                "pythonPath": "/usr/bin/python3"
+            },
+        },
+        {
+            "name": "Attach (Remote Debug)",
+            "type": "pythonExperimental",
+            "request": "attach",
+            "port": 3000,
+            "host": "localhost"
         },
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/1927",
-            "args": ["${workspaceFolder}/data/entrada2095"],
+            "program": "${workspaceFolder}/bin/2115",
+            "args": ["${workspaceFolder}/data/entrada2115"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "E://cygwin64//bin//gdb.exe",
+            //"miDebuggerPath": "E://cygwin64//bin//gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

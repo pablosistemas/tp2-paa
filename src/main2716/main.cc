@@ -39,6 +39,5 @@ int main(int argc, char** argv) {
         fprintf(stdin, "%u\n", (uint32_t)std::abs(soma_gugu - soma_rangel));
     }
 
-    //fclose(arq);
     return 0;
 }

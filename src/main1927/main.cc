@@ -71,7 +71,7 @@ std::vector<tipo_tupla>::iterator tapioca_repetida(uint32_t x, uint32_t y, uint3
 
 int main() {
     uint32_t n;
-    FILE *entrada = stdin; //fopen("data/entrada1927_3", "r");
+    FILE *entrada = stdin;
     fscanf(entrada, "%u\n", &n);
 
     for(auto it = dp.begin(); it != dp.end(); it++){

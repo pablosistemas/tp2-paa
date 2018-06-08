@@ -28,7 +28,7 @@ def main():
         dp = []
         for i in range(N):
             linha = entrada.readline()
-            dp.append(map(int, re.findall(r'\d+', linha)))
+            dp.append(list(map(int, re.findall(r'\d+', linha))))
         dp_ordenado = ordena_por_tempo_fim(dp)
         instante = calcula_menor_instante()
         print(instante)

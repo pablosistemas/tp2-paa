@@ -63,7 +63,6 @@ def inicializa_pd(n):
 
 
 def main():
-    #entrada = open('data/entrada1927', 'r')
     entrada = sys.stdin
 
     linha = entrada.readline()
